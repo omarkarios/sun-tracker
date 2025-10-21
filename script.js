@@ -38,7 +38,7 @@ async function fetchSunlight(lat, lon) {
   return data.current;
 }
 
-// --- Render cards ---
+// Render cards
 function renderCounties(countyList) {
   container.innerHTML = "";
   countyList.forEach(async (county) => {
@@ -47,6 +47,18 @@ function renderCounties(countyList) {
     card.innerHTML = `<h3>${county.name}</h3><p>Loading data...</p>`;
     container.appendChild(card);
 
-    
+    try {
+      const data = await fetchSunlight(county.lat, county.lon);
+      weatherCache[county.name] = data;
+      card.innerHTML = `
+        <h3>${county.name}</h3>
+        <p>☀️ Sunlight: <b>${data.shortwave_radiation} W/m²</b></p>
+        <p>🌡️ Temp: <b>${data.temperature_2m} °C</b></p>
+        <p>🕒 Time: ${data.time.slice(11)}</p>
+        <button class="fav-btn">⭐ Add to Favorites</button>
+      `;
+    } catch {
+      card.innerHTML = `<h3>${county.name}</h3><p style="color:red;">Error fetching data</p>`;
+    }
   });
 }
