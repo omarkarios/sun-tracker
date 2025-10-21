@@ -92,3 +92,10 @@ compareBtn.addEventListener("click", () => {
   const message = sorted.map(([name, data]) => `${name}: ${data.shortwave_radiation} W/m²`).join("\n");
   alert("☀️ Sunlight Comparison:\n\n" + message);
 });
+
+// Theme toggle
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  themeToggle.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+});
