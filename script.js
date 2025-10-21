@@ -9,3 +9,9 @@ const counties = [
   { name: "Nyeri", lat: -0.4197, lon: 36.9476 },
   { name: "Kitui", lat: -1.3667, lon: 38.0167 }
 ];
+
+const countySelect = document.getElementById("county-select");
+const searchInput = document.getElementById("search");
+const container = document.getElementById("cards-container");
+const themeToggle = document.getElementById("theme-toggle");
+const compareBtn = document.getElementById("compare-btn");
