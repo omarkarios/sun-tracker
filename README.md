@@ -63,9 +63,6 @@ It can be used to:
 https://api.openweathermap.org/data/2.5/weather?lat=-1.2864&lon=36.8172&units=metric&appid=YOUR_API_KEY
 ```
 
-*Note:* You must insert your own free API key from [https://openweathermap.org](https://openweathermap.org) in the script file.  
-Do **not** push your API key to GitHub.
-
 ---
 
 ## 🧩 Project Structure
