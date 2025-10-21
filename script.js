@@ -37,3 +37,16 @@ async function fetchSunlight(lat, lon) {
   const data = await res.json();
   return data.current;
 }
+
+// --- Render cards ---
+function renderCounties(countyList) {
+  container.innerHTML = "";
+  countyList.forEach(async (county) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${county.name}</h3><p>Loading data...</p>`;
+    container.appendChild(card);
+
+    
+  });
+}
