@@ -9,3 +9,17 @@ body {
   color: var(--text, #222);
   transition: background 0.3s, color 0.3s;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header, #2d6a4f);
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
