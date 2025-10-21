@@ -62,3 +62,10 @@ function renderCounties(countyList) {
     }
   });
 }
+
+// Search functionality
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+  visibleCounties = counties.filter(c => c.name.toLowerCase().includes(query));
+  renderCounties(visibleCounties);
+});
