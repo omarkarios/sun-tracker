@@ -54,3 +54,23 @@ header h1 {
   justify-content: center;
   gap: 1rem;
 }
+
+.card {
+  background: var(--card-bg, #fff);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --header: #081c15;
+  --card-bg: #1e1e1e;
+}
