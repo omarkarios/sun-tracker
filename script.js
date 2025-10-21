@@ -15,3 +15,16 @@ const searchInput = document.getElementById("search");
 const container = document.getElementById("cards-container");
 const themeToggle = document.getElementById("theme-toggle");
 const compareBtn = document.getElementById("compare-btn");
+
+let visibleCounties = [...counties];
+let weatherCache = {};
+
+// Initialize dropdown 
+function populateDropdown() {
+  counties.map(c => {
+    const opt = document.createElement("option");
+    opt.value = c.name;
+    opt.textContent = c.name;
+    countySelect.appendChild(opt);
+  });
+}
