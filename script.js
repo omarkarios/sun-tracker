@@ -105,3 +105,9 @@ if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   themeToggle.textContent = "☀️ Light Mode";
 }
+
+// Init
+document.addEventListener("DOMContentLoaded", () => {
+  populateDropdown();
+  renderCounties(counties);
+});
