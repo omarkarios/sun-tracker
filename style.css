@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg, #f4f6f8);
+  color: var(--text, #222);
+  transition: background 0.3s, color 0.3s;
+}
