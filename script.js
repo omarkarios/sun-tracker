@@ -69,3 +69,14 @@ searchInput.addEventListener("input", (e) => {
   visibleCounties = counties.filter(c => c.name.toLowerCase().includes(query));
   renderCounties(visibleCounties);
 });
+
+// Dropdown filter 
+countySelect.addEventListener("change", (e) => {
+  const selected = e.target.value;
+  if (!selected) {
+    visibleCounties = counties;
+  } else {
+    visibleCounties = counties.filter(c => c.name === selected);
+  }
+  renderCounties(visibleCounties);
+});
