@@ -74,3 +74,8 @@ header h1 {
   --header: #081c15;
   --card-bg: #1e1e1e;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+}
