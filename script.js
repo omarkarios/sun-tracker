@@ -80,3 +80,15 @@ countySelect.addEventListener("change", (e) => {
   }
   renderCounties(visibleCounties);
 });
+
+// Compare sunlight 
+compareBtn.addEventListener("click", () => {
+  const available = Object.entries(weatherCache);
+  if (available.length < 2) {
+    alert("Load data for at least two counties first!");
+    return;
+  }
+  const sorted = available.sort((a, b) => b[1].shortwave_radiation - a[1].shortwave_radiation);
+  const message = sorted.map(([name, data]) => `${name}: ${data.shortwave_radiation} W/m²`).join("\n");
+  alert("☀️ Sunlight Comparison:\n\n" + message);
+});
